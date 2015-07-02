@@ -481,6 +481,7 @@
 				D29A5EAF1B443694004CF30D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D29A5EB01B443694004CF30D /* Build configuration list for PBXNativeTarget "Xcode7_UITestSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +490,7 @@
 				D29A5EB21B443694004CF30D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D29A5EB31B443694004CF30D /* Build configuration list for PBXNativeTarget "Xcode7_UITestSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +499,7 @@
 				D29A5EB51B443694004CF30D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

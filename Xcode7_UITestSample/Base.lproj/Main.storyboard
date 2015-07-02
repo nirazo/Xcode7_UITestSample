@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Xcode7_UITestSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjj-lJ-xIt">
+                                <rect key="frame" x="266" y="360" width="68" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mjj-lJ-xIt" secondAttribute="height" multiplier="34:15" id="gM3-mL-yNB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Count up!"/>
+                                <connections>
+                                    <action selector="countBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIu-WF-WMi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D60-zQ-O7u">
+                                <rect key="frame" x="280" y="436" width="39" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WNt-7z-SV2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1r-pv-hdC">
+                                <rect key="frame" x="280" y="196" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D60-zQ-O7u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6nR-OA-kZT"/>
+                            <constraint firstItem="A1r-pv-hdC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JS0-rD-O10"/>
+                            <constraint firstItem="mjj-lJ-xIt" firstAttribute="top" secondItem="A1r-pv-hdC" secondAttribute="bottom" constant="70" id="br3-7j-qK5"/>
+                            <constraint firstItem="A1r-pv-hdC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hqQ-SC-v5H"/>
+                            <constraint firstItem="D60-zQ-O7u" firstAttribute="top" secondItem="mjj-lJ-xIt" secondAttribute="bottom" constant="70" id="pr0-ZZ-kRV"/>
+                            <constraint firstItem="mjj-lJ-xIt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qLD-v6-ghf"/>
+                            <constraint firstItem="A1r-pv-hdC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="usP-m3-rWM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hqQ-SC-v5H"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="countBtn" destination="mjj-lJ-xIt" id="HOL-qD-aQO"/>
+                        <outlet property="countLabel" destination="A1r-pv-hdC" id="52r-Rs-qbW"/>
+                        <outlet property="resetBtn" destination="D60-zQ-O7u" id="cbn-dM-kLi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="313" y="325"/>
         </scene>
     </scenes>
 </document>

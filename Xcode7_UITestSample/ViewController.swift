@@ -10,16 +10,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var countBtn: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var resetBtn: UIButton!
+    
+    var tappedCount : Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        displayCount()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func countBtnTapped(sender: AnyObject) {
+        tappedCount++
+        displayCount()
+    }
+    
+    @IBAction func resetBtnTapped(sender: AnyObject) {
+        tappedCount = 0
+        displayCount()
+    }
+    
+    func displayCount() {
+        countLabel.text = String(tappedCount)
+    }
 
 }
 
