@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displayCount()
+        countLabel.accessibilityIdentifier = "countLabel"
     }
 
     override func didReceiveMemoryWarning() {

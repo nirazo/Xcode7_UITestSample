@@ -28,8 +28,20 @@ class Xcode7_UITestSampleUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let countUpButton = app.buttons["Count up!"]
+        let staticText = app.staticTexts["countLabel"]
+        countUpButton.tap()
+        countUpButton.tap()
+        countUpButton.tap()
+        XCTAssertTrue(staticText.label == "3")
+        
+        let resetButton = app.buttons["Reset"]
+        resetButton.tap()
+        countUpButton.tap()
+        resetButton.tap()
+        countUpButton.tap()
+        XCTAssertTrue(staticText.label == "1")
     }
     
 }
